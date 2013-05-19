@@ -1,7 +1,8 @@
 (function() {
     var o = this.oJS || require('o-core');
     if (!o) throw new Error('...');
-require('o-types');
+    if (!o.Type) require('o-types');
+    if (!o.Type) throw new Error('...');
 
     function ucFirst (str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
